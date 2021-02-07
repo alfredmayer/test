@@ -27,3 +27,8 @@ jobs:
 
       - name: Publish app 📰
         run: dotnet publish -c Release -o ./out
+      - name: upload 
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-artifact
+          path: ./out 
