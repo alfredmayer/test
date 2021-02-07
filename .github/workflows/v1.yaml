@@ -8,15 +8,14 @@ on:
 env:
   DOTNET_VERSION: '5.0.x'
   
-  
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-      steps:
-        - name: Check out code 📌
-          uses: actions/checkout@v2
-        
-        - name: Setup .NET 5 
-          uses: actions/setup-dotnet@v1
-          with:
-            dotnet-version: ${{ env.DOTNET_VERSION }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code 🛎
+        uses: actions/checkout@v2
+      
+      - name: Setup .NET 5 🔧
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
